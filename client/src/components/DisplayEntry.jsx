@@ -69,19 +69,13 @@ class DisplayEntry extends React.Component {
         </div>
         <div className = "KL-review-item-wrapper">
           <div className = "KL-review-wrapper">
-            <span className = "KL-review-stars">
-              ★★★★★
-            </span>
-            <span className ="KL-review">
-              ({this.props.element.rating})
-            </span>
+            <span className = "KL-review-stars">★★★★★</span>
+            <span className ="KL-review">5.0 ({this.props.element.rating})</span>
           </div>
-          <span className = "KL-item-number">
-            Item# {this.props.element.item}
-          </span>
+          <span className = "KL-item-number">Item# {this.props.element.item}</span>
         </div>
         <div className = "KL-price">
-          ${this.props.element.price} 
+          <span>${this.props.element.price}</span> 
         </div>
         <div className = "KL-free-shipping">
           <FreeShipping/>
@@ -110,7 +104,7 @@ class DisplayEntry extends React.Component {
                 <select className="KL-size-edit">
                   <option className="KL-size-edit-option2" value="select size">Select Size</option>
                   <option className="KL-size-edit-option1" value="available">Available</option>
-                  <option selected value="small">S</option>
+                  <option selected value="small">{this.props.element.size}</option>
                 </select>
               </div>
               <div className="KL-quantity-change">

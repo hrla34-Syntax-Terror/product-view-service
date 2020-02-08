@@ -6,7 +6,7 @@ router
   .get(controllers.get)
 
 router
-  .route('/products/:productId')
+  .route('/product')
   .get(controllers.getOne)
 
 module.exports = router;

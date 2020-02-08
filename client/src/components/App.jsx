@@ -6,7 +6,8 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      element:''
+      element:'',
+      productId: window.location.pathname.slice(1,-1)
     };
 
     // this.getAll = this.getAll.bind(this);
@@ -33,10 +34,11 @@ class App extends React.Component {
     //     .catch(err => console.error(err))
     // }
     
-    //window.location.
+    //window.location.pathname
+    // /12/
     getOne() {
       axios
-      .get('/api/products/60')
+      .get(`http://localhost:3333/${this.state.productId}/product`)
       .then((res) => {
         this.setState({
           element: res.data[0]

@@ -18,7 +18,43 @@
     ]
   },
   {
-    "name": "Dog Goggles - X-Small",
+    "productId": 1,
+    "name": "Rex Specs Dog Goggles - Large",
+    "brand": "Rex Specs",
+    "item": 160479,
+    "color": "Army Green/Clear/Smoke",
+    "rating": 5.0,
+    "price": 79.95,
+    "size": "L",
+    "images": [
+      "https://fec-rei-product-img.s3-us-west-1.amazonaws.com/(Rex+Specs)+Dog+Goggles+-+Large.jpeg",
+      "https://hr34-fec-rei.s3-us-west-1.amazonaws.com/Rex-specs-dog-goggles-large-green-dogtop.jfif",
+      "https://hr34-fec-rei.s3-us-west-1.amazonaws.com/Rex-specs-dog-goggles-small-black-goggles.jpg",
+      "https://hr34-fec-rei.s3-us-west-1.amazonaws.com/Rex-specs-dog-goggles-small-pink-dogfront.jpg",
+      "https://hr34-fec-rei.s3-us-west-1.amazonaws.com/Rex-specs-dog-goggles-large-green-dogsfront.jfif",
+      "https://hr34-fec-rei.s3-us-west-1.amazonaws.com/Rex-specs-dog-goggles-large-green-dogside.jfif"
+      ]
+  },
+  {
+    "productId": 2,
+    "name": "Rex Specs Dog Goggles - Medium",
+    "brand": "Rex Specs",
+    "item": 160480,
+    "color": "Hunter Orange/Clear/Red Mirror",
+    "rating": 5.0,
+    "price": 79.95,
+    "size": "M",
+    "images": [
+      "https://fec-rei-product-img.s3-us-west-1.amazonaws.com/(Rex+Specs)+Dog+Goggles+-+Medium.jpeg",
+      "https://hr34-fec-rei.s3-us-west-1.amazonaws.com/Rex-specs-dog-goggles-medium-orange-dogfront2.jfif",
+      "https://hr34-fec-rei.s3-us-west-1.amazonaws.com/Rex-specs-dog-goggles-medium-orange-goggles.jfif",
+      "https://hr34-fec-rei.s3-us-west-1.amazonaws.com/Rex-specs-dog-goggles-medium-orange-dogfront.jfif",
+      "https://hr34-fec-rei.s3-us-west-1.amazonaws.com/Rex-specs-dog-goggles-large-green-dogsfront.jfif",
+      "https://hr34-fec-rei.s3-us-west-1.amazonaws.com/Rex-specs-dog-goggles-large-green-dogside.jfif"
+      ]
+  },
+  {
+    "name": "Rex Specs Dog Goggles - X-Small",
     "brand": "Rex Specs",
     "images": [
     "https://fec-rei-product-img.s3-us-west-1.amazonaws.com/(Rex+Specs)+Dog+Goggles+-+X-Small.jpeg",

@@ -15,12 +15,9 @@ app.use(cors());
 app.use(morgan('dev'));
 
 //static files
-//'/:productId'
-app.use(express.static(path.join(__dirname, '../client/dist')));
-
-//router
-///api is my baseurl is
-app.use('/api', router);
+app.use('/:id', router);
+// remember to change path when connecting to proxy
+app.use('/:id', express.static(path.join(__dirname, '../client/dist')));
 
 //listen
 app.listen(port, () => console.log(`Kayrub's App listening on port ${port}!`));

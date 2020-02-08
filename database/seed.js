@@ -5,11 +5,22 @@ const faker = require('faker');
 
 let products = [];
 
-push var i =0 
+for (var i = 0; i < 3; i++) {
+  let realProduct = {};
+  realProduct.productId = i;
+  realProduct.name = seedData[i].name;
+  realProduct.brand = seedData[i].brand;
+  realProduct.item = seedData[i].item;
+  realProduct.color = seedData[i].color;
+  realProduct.rating = Math.floor(Math.random() * 100);
+  realProduct.price = seedData[i].price
+  realProduct.size = seedData[i].size;
+  realProduct.images = seedData[i].images;
 
+  products.push(realProduct);
+}
 
-// produce 100 product objects, then push each into products array
-for (var i = 5; i < 100; i++) {
+for (var i = 3; i < 100; i++) {
   let product = {};
   product.productId = i;
   product.name = seedData[i].name;
