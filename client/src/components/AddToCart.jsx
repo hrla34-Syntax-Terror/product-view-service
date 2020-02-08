@@ -36,7 +36,9 @@ class AddToCart extends React.Component {
     }
     return (
       <div>
-        <span style={addCartStyle} onClick={this.handleOpenModal}>Add to cart</span>
+        <div className = "KL-add" onClick={this.handleOpenModal}>
+          <span style={addCartStyle}>Add to cart</span>
+        </div>
         <ReactModal
            isOpen={this.state.showModal}
            contentLabel="Add to Cart"
@@ -67,23 +69,17 @@ class AddToCart extends React.Component {
             </div>
             <div className="KL-add-search-bar">
               <div className="KL-add-actual-search">
-                <img className="KL-search-image"/>
-                <input className="KL-search-bar" defaultValue="Zip code or city, state"/>
-                  <div className="KL-add-search-button">
+                <div className="KL-search-bar-border">
+                  <input className="KL-search-bar" placeholder="ZIP code or city, state"/>
+                  <span className="KL-add-search-button">Search</span>
+                </div>
+                <div className="KL-location-image">
+                  <div className="KL-location-image-button-holder">
+                    <img className="KL-location-image-button" src="https://rei.github.io/cedar-icons/icons/find-location.svg"/>
                   </div>
-                <img  className="KL-location-image" src="https://rei.github.io/cedar-icons/icons/find-location.svg"/>
-                    
-              <div className="KL-add-location">
-              </div>
+                </div>
               </div>
             </div>
-            {/* <div bottom half>
-              {settimeout function}
-              {take picture and upload it}
-              {scroll bar functionality?}
-
-            </div> */}
-
           </div>
         </ReactModal>
       </div>

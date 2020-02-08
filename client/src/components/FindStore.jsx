@@ -42,8 +42,41 @@ class FindStore extends React.Component {
            style={findStyles}
            onRequestClose={this.handleCloseModal}
         >
-          <div className="KL-x-modal" onClick={this.handleCloseModal}>
-            <img className="KL-x-symbol" src="https://rei.github.io/cedar-icons/icons/x-lg.svg"/>
+          <div>
+            <div className="KL-add-header">
+                <span>Find a store near you</span>
+              <div className="KL-x-modal" onClick={this.handleCloseModal}>
+                <img className="KL-x-symbol" src="https://rei.github.io/cedar-icons/icons/x-lg.svg"/>
+              </div>
+            </div>
+            <div className="KL-add-to-details">
+              <img 
+              className="KL-add-product-style"
+              src={this.props.element.images[0]}
+              />
+              <div className="KL-add-product-details">
+                <div>
+                {this.props.element.brand}
+                </div>
+                {this.props.element.name}
+                <div>
+                {this.props.element.size}
+                </div>
+              </div>
+            </div>
+            <div className="KL-add-search-bar">
+              <div className="KL-add-actual-search">
+                <div className="KL-search-bar-border">
+                  <input className="KL-search-bar" placeholder="ZIP code or city, state"/>
+                  <span className="KL-add-search-button">Search</span>
+                </div>
+                <div className="KL-location-image">
+                  <div className="KL-location-image-button-holder">
+                    <img className="KL-location-image-button" src="https://rei.github.io/cedar-icons/icons/find-location.svg"/>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </ReactModal>
       </div>

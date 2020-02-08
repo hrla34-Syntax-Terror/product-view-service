@@ -132,10 +132,10 @@ class DisplayEntry extends React.Component {
             <label className="KL-pickup-cursor" for="KL-pickup-radio-id">Pick up in store - Free</label>
           </div>
           <div className = "KL-store-near">
-            <FindStore/>
+            <FindStore element={this.props.element}/>
           </div>
         </div>
-        <div className = "KL-add">
+        <div>
           <AddToCart element={this.props.element}/>
         </div>
         <div className = "KL-add-wrapper">

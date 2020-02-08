@@ -63,8 +63,8 @@ class ImageCarousel extends React.Component {
                   style={{width: 107, height: 78, borderRadius: 5, border: "2px solid #c5c5c5", margin: 5}}
                   src={this.props.element.images[4]}/>
             </label>
-            <label className="KL-carousel-radio" htmlFor="image-5">
-                <input type="radio" name="images" id="image-5"alt="Image 6 of" value={this.props.element.images[5]} onClick={this.handleChange}/>
+            <label className="KL-carousel-radio" htmlFor={this.props.element.description} >
+                <input type="radio" name="images" id={this.props.element.description} alt="Image 6 of " value={this.props.element.images[5]} onClick={this.handleChange}/>
                   <img
                     className="KL-carousel-radio-img"
                     style={{width: 107, height: 78, borderRadius: 5, border: "2px solid #c5c5c5", margin: "5px 0px 5px 5px"}}
@@ -73,7 +73,7 @@ class ImageCarousel extends React.Component {
           </div>
           <div className = "KL-count-name-wrapper">
             <span className = "KL-image-count">
-              {this.state.description} {this.props.element.images.length}: 
+              {this.state.description} {this.props.element.images.length}:
             </span>
             <span className = "KL-image-name">
               {this.state.description2}

@@ -9,7 +9,8 @@ var productSchema = mongoose.Schema ({
   rating: {type: Number},
   price: {type: Number},
   size: {type: String},
-  images: [{type: String}]
+  images: [{type: String}],
+  description: [{type: String}]
 });
 
 module.exports = productSchema
