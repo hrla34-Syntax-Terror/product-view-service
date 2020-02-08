@@ -31,19 +31,20 @@ class FindStore extends React.Component {
   
   render () {
     var findStoreStyle = {
-      textDecoration: "none",
       color: "#3278AE"
     }
     return (
       <div>
-        <a href="###" style={findStoreStyle} onClick={this.handleOpenModal}>Find a store near you</a>
+        <span className="KL-store-cursor" style={findStoreStyle} onClick={this.handleOpenModal}>Find a store near you</span>
         <ReactModal
            isOpen={this.state.showModal}
            contentLabel="Find a Store"
            style={findStyles}
            onRequestClose={this.handleCloseModal}
         >
-          <button className="KL-x-modal" onClick={this.handleCloseModal}>x</button>
+          <div className="KL-x-modal" onClick={this.handleCloseModal}>
+            <img className="KL-x-symbol" src="https://rei.github.io/cedar-icons/icons/x-lg.svg"/>
+          </div>
         </ReactModal>
       </div>
     );

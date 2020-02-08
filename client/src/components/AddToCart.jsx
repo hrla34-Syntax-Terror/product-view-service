@@ -36,14 +36,55 @@ class AddToCart extends React.Component {
     }
     return (
       <div>
-        <a href="####" style={addCartStyle} onClick={this.handleOpenModal}>Add to cart</a>
+        <span style={addCartStyle} onClick={this.handleOpenModal}>Add to cart</span>
         <ReactModal
            isOpen={this.state.showModal}
            contentLabel="Add to Cart"
            style={cartStyles}
            onRequestClose={this.handleCloseModal}
         >
-           <button className="KL-x-modal" onClick={this.handleCloseModal}>x</button>
+          <div>
+            <div className="KL-add-header">
+                <span>Find a store near you</span>
+              <div className="KL-x-modal" onClick={this.handleCloseModal}>
+                <img className="KL-x-symbol" src="https://rei.github.io/cedar-icons/icons/x-lg.svg"/>
+              </div>
+            </div>
+            <div className="KL-add-to-details">
+              <img 
+              className="KL-add-product-style"
+              src={this.props.element.images[0]}
+              />
+              <div className="KL-add-product-details">
+                <div>
+                {this.props.element.brand}
+                </div>
+                {this.props.element.name}
+                <div>
+                {this.props.element.size}
+                </div>
+              </div>
+            </div>
+            <div className="KL-add-search-bar">
+              <div className="KL-add-actual-search">
+                <img className="KL-search-image"/>
+                <input className="KL-search-bar" defaultValue="Zip code or city, state"/>
+                  <div className="KL-add-search-button">
+                  </div>
+                <img  className="KL-location-image" src="https://rei.github.io/cedar-icons/icons/find-location.svg"/>
+                    
+              <div className="KL-add-location">
+              </div>
+              </div>
+            </div>
+            {/* <div bottom half>
+              {settimeout function}
+              {take picture and upload it}
+              {scroll bar functionality?}
+
+            </div> */}
+
+          </div>
         </ReactModal>
       </div>
     );

@@ -6,23 +6,41 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      elements: [],
+      element:''
     };
 
-    this.getAll = this.getAll.bind(this);
+    // this.getAll = this.getAll.bind(this);
+    this.getOne = this.getOne.bind(this);
   }
 
+  // componentDidMount() {
+  //   this.getAll();
+  // }
+
+  //pass in an id route
   componentDidMount() {
-    this.getAll();
+    this.getOne();
   }
 
-  getAll() {
-    axios
-      .get('/api/products')
+  // getAll() {
+  //   axios
+  //     .get('/api/products')
+  //     .then((res) => {
+  //       this.setState({
+    //         elements: res.data
+    //       }, () => console.log(this.state.products))
+    //     })
+    //     .catch(err => console.error(err))
+    // }
+    
+    //window.location.
+    getOne() {
+      axios
+      .get('/api/products/60')
       .then((res) => {
         this.setState({
-          elements: res.data
-        }, () => console.log(this.state.products))
+          element: res.data[0]
+        }, () => console.log(this.state.element.images))
       })
       .catch(err => console.error(err))
   }
@@ -30,7 +48,7 @@ class App extends React.Component {
   render() {
     return(
       <div className=".KL-body">
-        <Display elements={this.state.elements}/>
+        {this.state.element && <Display element={this.state.element}/>}
       </div>
     )
   }

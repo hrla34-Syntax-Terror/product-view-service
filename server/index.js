@@ -15,9 +15,11 @@ app.use(cors());
 app.use(morgan('dev'));
 
 //static files
+//'/:productId'
 app.use(express.static(path.join(__dirname, '../client/dist')));
 
 //router
+///api is my baseurl is
 app.use('/api', router);
 
 //listen

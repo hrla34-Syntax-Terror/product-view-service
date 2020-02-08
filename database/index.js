@@ -1,6 +1,6 @@
 var mongoose = require('mongoose');
 var productSchema = require('./schema.js');
-var mongoURI = 'mongodb://localhost/REI';
+var mongoURI = 'mongodb://localhost/REIproducts';
 mongoose.Promise = global.Promise;
 
 

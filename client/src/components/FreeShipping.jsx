@@ -45,16 +45,18 @@ class FreeShipping extends React.Component {
     }
     return (
       <div className = "KL-modal-wrapper">
-        <a href="#" style={shippingStyle} onClick={this.handleOpenModal}>
+        <span className = "KL-shipping-class" style={shippingStyle} onClick={this.handleOpenModal}>
           <img src="https://rei.github.io/cedar-icons/icons/bus.svg" style={shippingLogoStyle}/>
-          This item ships for FREE!</a>
+          This item ships for FREE!</span>
         <ReactModal
            isOpen={this.state.showModal}
            contentLabel="Free Shipping"
            style={customStyles}
            onRequestClose={this.handleCloseModal}
         >
-          <button className="KL-x-modal" onClick={this.handleCloseModal}>X</button>
+          <div className="KL-x-modal" onClick={this.handleCloseModal}>
+            <img className="KL-x-symbol" src="https://rei.github.io/cedar-icons/icons/x-lg.svg"/>
+          </div>
           <p className="KL-free-shipping-header">FREE U.S. STANDARD SHIPPING on orders of $50 or more including Skis and Snowboards.</p>
             <ul>
               <li>Offer valid 11/1/2019 12:01am – 2/1/2020 11:59pm PT.</li>

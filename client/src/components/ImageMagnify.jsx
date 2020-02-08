@@ -1,29 +1,33 @@
 import React from 'react';
 import ReactImageMagnify from 'react-image-magnify';
+import { AutoScaling } from 'aws-sdk';
 
 var ImageMagnify = (props) => {
   return (
+    <div className="bigcontainer">
     <div className = "KL-zoom-container">
       <ReactImageMagnify {...{
           smallImage: {
               isFluidWidth: true,
+              // width: "auto",
               src: props.picture,
           },
+          
+          imageStyle: {
+              maxHeight: 520,
+              width: "auto"
+          },
+
           largeImage: {
               src: props.picture,
               width: 1905,
               height: 1500,
-              
           },
 
           enlargedImageContainerStyle: {
-            zIndex: "4"
+            zIndex: "2"
           },
-          // lensStyle: {
-          //     width:2000,
-          //     height:400,
-          //     cursor: none
-          // },
+         
           
           enlargedImageContainerDimensions: {
             width: 350,
@@ -31,6 +35,7 @@ var ImageMagnify = (props) => {
           }
 
       }} />
+    </div>
     </div>
   );
 }

@@ -41,7 +41,7 @@ class ReturnPolicy extends React.Component {
     }
     return (
       <div>
-        <a href="##" style={returnStyle} onClick={this.handleOpenModal}>REI return Policy</a>
+        <span style={returnStyle} onClick={this.handleOpenModal}>REI return Policy</span>
         <ReactModal
            isOpen={this.state.showModal}
            contentLabel="Return Policy"

@@ -4,6 +4,7 @@ import ReturnPolicy from './ReturnPolicy.jsx';
 import FindStore from './FindStore.jsx';
 import AddToCart from './AddToCart.jsx';
 import ImageCarousel from './ImageCarousel.jsx';
+import BreadCrumbs from './BreadCrumbs.jsx';
 
 class DisplayEntry extends React.Component {
   constructor(props) {
@@ -34,9 +35,15 @@ class DisplayEntry extends React.Component {
   }
 
   decrementQuantity() {
-    this.setState({
-      quantity: this.state.quantity - 1
-    })
+    if (this.state.quantity < 2) {
+      this.setState({
+        quantity: 1
+      }) 
+    } else {
+      this.setState({
+        quantity: this.state.quantity - 1
+      })
+    }
   }
 
   incrementQuantity() {
@@ -47,6 +54,10 @@ class DisplayEntry extends React.Component {
 
   render() {
     return( 
+    <div className="test">
+    <div className="KL-bread">
+      <BreadCrumbs/>
+    </div>
     <div className = "KL-main">
       <ImageCarousel element = {this.props.element}/>
       <div className = "KL-description">
@@ -57,10 +68,17 @@ class DisplayEntry extends React.Component {
           {this.props.element.name}  
         </div>
         <div className = "KL-review-item-wrapper">
-          ({this.props.element.rating})
-          <div className = "KL-item-number">
-            Item# {this.props.element.item}
+          <div className = "KL-review-wrapper">
+            <span className = "KL-review-stars">
+              ★★★★★
+            </span>
+            <span className ="KL-review">
+              ({this.props.element.rating})
+            </span>
           </div>
+          <span className = "KL-item-number">
+            Item# {this.props.element.item}
+          </span>
         </div>
         <div className = "KL-price">
           ${this.props.element.price} 
@@ -96,14 +114,14 @@ class DisplayEntry extends React.Component {
                 </select>
               </div>
               <div className="KL-quantity-change">
-                <div className="KL-button-div">
-                <button className="KL-button-decrement" onClick={this.decrementQuantity}>-</button>
+                <div className="KL-button-div" onClick={this.decrementQuantity}>
+                  <img className="KL-button-decrement" src="https://rei.github.io/cedar-icons/icons/minus-lg.svg"/>
                 </div>
                   <form onSubmit={this.handleSubmit}>
-                    <input className="KL-quantity-input" name="quantity" defaultValue={this.state.quantity} onChange={this.handleChange}></input>
+                    <input className="KL-quantity-input" name="quantity" value={this.state.quantity} onChange={this.handleChange}></input>
                   </form>
-                <div className="KL-button-div">
-                <button className="KL-button-increment" onClick={this.incrementQuantity}>+</button>
+                <div className="KL-button-div" onClick={this.incrementQuantity}>
+                  <img className="KL-button-increment" src="https://rei.github.io/cedar-icons/icons/plus-lg.svg"/>
                 </div>              
               </div>
             </div>
@@ -112,19 +130,19 @@ class DisplayEntry extends React.Component {
         <hr className="KL-hr"></hr>
         <div className = "KL-shipping-wrapper">
           <div className = "KL-shipping">
-            <input type="radio" className="KL-shipping-radio" id="KL-shipping-radio-id"/>
-            <label for="KL-shipping-radio-id">Ship to address</label>
+            <input type="radio" className="KL-shipping-radio" name="shippingRadio" id="KL-shipping-radio-id"/>
+            <label className="KL-shipping-cursor" for="KL-shipping-radio-id">Ship to address</label>
           </div>  
           <div className = "KL-pickup">
-            <input type="radio" className="KL-pickup-radio" id="KL-pickup-radio-id"/>
-            <label for="KL-pickup-radio-id">Pick up in store - Free</label>
+            <input type="radio" className="KL-pickup-radio" name="shippingRadio" id="KL-pickup-radio-id"/>
+            <label className="KL-pickup-cursor" for="KL-pickup-radio-id">Pick up in store - Free</label>
           </div>
           <div className = "KL-store-near">
             <FindStore/>
           </div>
         </div>
         <div className = "KL-add">
-          <AddToCart />
+          <AddToCart element={this.props.element}/>
         </div>
         <div className = "KL-add-wrapper">
           <div className = "KL-wish-list">
@@ -140,6 +158,7 @@ class DisplayEntry extends React.Component {
           </div>
         </div>
       </div>
+    </div>
     </div>
     )
   }
