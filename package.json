@@ -15,11 +15,12 @@
   "author": "kayrub",
   "license": "ISC",
   "devDependencies": {
-    "babel-core": "^6.23.1",
-    "babel-loader": "^6.3.2",
-    "babel-preset-es2015": "^6.22.0",
-    "babel-preset-react": "^6.23.0",
-    "webpack": "^2.2.1"
+    "@babel/preset-env": "^7.8.3",
+    "@babel/preset-react": "^7.8.3",
+    "babel-loader": "^8.0.6",
+    "eslint-config-hackreactor": "github:reactorcore/eslint-config-hackreactor",
+    "webpack": "^4.41.5",
+    "webpack-cli": "^3.3.10"
   },
   "bugs": {
     "url": "https://github.com/hrla34-Syntax-Terror/product-view-service/issues"
@@ -40,6 +41,7 @@
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-image-magnify": "^2.7.4",
-    "react-modal": "^3.11.1"
+    "react-modal": "^3.11.1",
+    "@babel/plugin-proposal-class-properties": "^7.8.3"
   }
 }
