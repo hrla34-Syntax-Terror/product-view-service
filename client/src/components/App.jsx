@@ -50,7 +50,7 @@ class App extends React.Component {
 
   render() {
     return(
-      <div className=".KL-body">
+      <div className="KL-body">
         {this.state.element && <Display element={this.state.element}/>}
       </div>
     )
