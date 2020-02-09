@@ -7,7 +7,7 @@ class App extends React.Component {
     super(props);
     this.state = {
       element:'',
-      productId: window.location.pathname.slice(1,-1)
+      // productId: window.location.pathname.slice(1,-1)
     };
 
     // this.getAll = this.getAll.bind(this);
@@ -20,7 +20,9 @@ class App extends React.Component {
 
   //pass in an id route
   componentDidMount() {
-    this.getOne();
+    var id = window.location.href.slice(22);
+    if (id === '') { id = 0 }
+    this.getOne(id);
   }
 
   // getAll() {
@@ -35,10 +37,9 @@ class App extends React.Component {
     // }
     
     //window.location.pathname
-    // /12/
-    getOne() {
+    getOne(productId) {
       axios
-      .get(`http://localhost:3333/${this.state.productId}/product`)
+      .get(`http://localhost:3333/api/${productId}`)
       .then((res) => {
         this.setState({
           element: res.data[0]

@@ -13,8 +13,8 @@ const controllers = {
   },
 
   getOne: (req, res) => {
-    //req.baseurl??
-    helpers.getOne(req.baseUrl.slice(1))
+    //req.baseUrl.slice(1)
+    helpers.getOne(req.params.productId)
     .then((data) => {
       res.status(200).send(data);
     })
