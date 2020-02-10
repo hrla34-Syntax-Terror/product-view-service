@@ -60,19 +60,17 @@ class FreeShipping extends React.Component {
           <div className="KL-x-modal" onClick={this.handleCloseModal}>
             <img className="KL-x-symbol" src="https://rei.github.io/cedar-icons/icons/x-lg.svg"/>
           </div>
-          <p className="KL-free-shipping-header">FREE U.S. STANDARD SHIPPING on orders of $50 or more including Skis and Snowboards.</p>
-            <ul>
-              <li>Offer valid 11/1/2019 12:01am – 2/1/2020 11:59pm PT.</li>
-              <li>Offer valid only on orders placed at REI.com, REI Outlet and 1-800-426-4840.</li>
-              <li>Offer not valid on return shipments, special orders, prior purchases, REI gift cards, memberships, shop services and rentals.</li>
-              <li>Offer is limited to stock on hand and backorderable items, is nontransferable and is not redeemable for cash.</li>
-              <li>Offer valid on all orders with a pre-tax subtotal of $50 or more; other discounts applied to your order could change your subtotal.</li>
-              <li>Offer limited to standard shipping to U.S. addresses only (including APOs and FPOs).</li>
-              <li>Oversized shipping charges for any heavy or large items other than skis or snowboards will be applied. These oversized shipping charges will be reflected at checkout</li>
-              <li>Offer valid for free oversize shipping for skis, snowboards, Yeti, Otterbox, and RovR Coolers.</li>
-              <li>To order by phone, call 1-800-426-4840 Mon-Fri, 5am through 10pm and Sat-Sun, 6am through 9pm PT.</li>
-            </ul>
-          <p><a href="" style={returnStyle}>Estimated arrival dates</a> are for domestic orders placed today. Estimated arrival dates are not guaranteed. Weather delays and other unforeseen circumstances may impact delivery time.</p>
+          <div className="KL-free-shipping-header">FREE U.S. STANDARD SHIPPING on orders of $50 or more including Skis and Snowboards.</div>
+              <div className="KL-free-shipping-list">• Offer valid 11/1/2019 12:01am – 2/1/2020 11:59pm PT.</div>
+              <div className="KL-free-shipping-list">• Offer valid only on orders placed at REI.com, REI Outlet and 1-800-426-4840.</div>
+              <div className="KL-free-shipping-list">• Offer not valid on return shipments, special orders, prior purchases, REI gift cards, memberships, shop services and rentals.</div>
+              <div className="KL-free-shipping-list">• Offer is limited to stock on hand and backorderable items, is nontransferable and is not redeemable for cash.</div>
+              <div className="KL-free-shipping-list">• Offer valid on all orders with a pre-tax subtotal of $50 or more; other discounts applied to your order could change your subtotal.</div>
+              <div className="KL-free-shipping-list">• Offer limited to standard shipping to U.S. addresses only (including APOs and FPOs).</div>
+              <div className="KL-free-shipping-list">• Oversized shipping charges for any heavy or large items other than skis or snowboards will be applied. These oversized shipping charges will be reflected at checkout</div>
+              <div className="KL-free-shipping-list">• Offer valid for free oversize shipping for skis, snowboards, Yeti, Otterbox, and RovR Coolers.</div>
+              <div className="KL-free-shipping-list">• To order by phone, call 1-800-426-4840 Mon-Fri, 5am through 10pm and Sat-Sun, 6am through 9pm PT.</div>
+          <div className="KL-free-shipping-footer"><a href="" style={returnStyle}>Estimated arrival dates</a> are for domestic orders placed today. Estimated arrival dates are not guaranteed. Weather delays and other unforeseen circumstances may impact delivery time.</div>
         </ReactModal>
       </div>
     );
@@ -81,3 +79,22 @@ class FreeShipping extends React.Component {
 
 
 export default FreeShipping;
+
+/* <span className="KL-free-shipping-bullet">• </span><span className="KL-free-shipping-list"> Offer valid 11/1/2019 12:01am – 2/1/2020 11:59pm PT.</span>
+              <div></div>
+              <span className="KL-free-shipping-bullet">• </span><span className="KL-free-shipping-list"> Offer valid only on orders placed at REI.com, REI Outlet and 1-800-426-4840.</span>
+              <div></div>
+              <span className="KL-free-shipping-bullet">• </span><span className="KL-free-shipping-list"> Offer not valid on return shipments, special orders, prior purchases, REI gift cards, memberships, shop services and rentals.</span>
+              <div></div>
+              <span className="KL-free-shipping-bullet">• </span><span className="KL-free-shipping-list"> Offer is limited to stock on hand and backorderable items, is nontransferable and is not redeemable for cash.</span>
+              <div></div>
+              <span className="KL-free-shipping-bullet">• </span><span className="KL-free-shipping-list"> Offer valid on all orders with a pre-tax subtotal of $50 or more; other discounts applied to your order could change your subtotal.</span>
+              <div></div>
+              <span className="KL-free-shipping-bullet">• </span><span className="KL-free-shipping-list"> Offer limited to standard shipping to U.S. addresses only (including APOs and FPOs).</span>
+              <div></div>
+              <span className="KL-free-shipping-bullet">• </span><span className="KL-free-shipping-list"> Oversized shipping charges for any heavy or large items other than skis or snowboards will be applied. These oversized shipping charges will be reflected at checkout</span>
+              <div></div>
+              <span className="KL-free-shipping-bullet">• </span><span className="KL-free-shipping-list"> Offer valid for free oversize shipping for skis, snowboards, Yeti, Otterbox, and RovR Coolers.</span>
+              <div></div>
+              <span className="KL-free-shipping-bullet">• </span><span className="KL-free-shipping-list"> To order by phone, call 1-800-426-4840 Mon-Fri, 5am through 10pm and Sat-Sun, 6am through 9pm PT.</span>
+</ul> */
