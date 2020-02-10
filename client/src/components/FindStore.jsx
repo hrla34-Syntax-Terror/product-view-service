@@ -4,8 +4,8 @@ import ReactModal from 'react-modal';
 const findStyles = {
   content : {
     top                   : '10%',
-    left                  : '30%',
-    right                 : '30%',
+    left                  : '34%',
+    right                 : '34%',
     bottom                : 'auto',
   }
 };

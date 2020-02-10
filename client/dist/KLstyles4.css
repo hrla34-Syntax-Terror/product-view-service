@@ -335,7 +335,8 @@
 }
 
 .KL-add-to-cart-image {
-  width: 100%
+  display:flex;
+  align-self: center;
 }
 
 .KL-free-shipping-header {
