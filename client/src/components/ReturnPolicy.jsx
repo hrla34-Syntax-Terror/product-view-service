@@ -7,6 +7,7 @@ var customReturnStyles = {
     left                  : '58%',
     right                 : '22%',
     bottom                : 'auto',
+    WebkitOverflowScrolling: 'touch'
   },
 
   overlay: {

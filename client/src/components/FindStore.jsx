@@ -77,6 +77,7 @@ class FindStore extends React.Component {
                 </div>
               </div>
             </div>
+            <img className="KL-add-to-cart-image" src ="https://fec-rei-product-img.s3-us-west-1.amazonaws.com/GhettoAddToCart.PNG"/>
           </div>
         </ReactModal>
       </div>
