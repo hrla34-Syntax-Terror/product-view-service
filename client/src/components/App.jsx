@@ -43,7 +43,7 @@ class App extends React.Component {
       .then((res) => {
         this.setState({
           element: res.data[0]
-        }, () => console.log(this.state.element.images))
+        })
       })
       .catch(err => console.error(err))
   }
